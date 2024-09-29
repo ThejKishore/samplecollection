@@ -1,0 +1,34 @@
+org:
+    eclipse:
+        store:
+            channel-count: 8
+            data-file-prefix: wpa
+            storage-directory: thej/storage-eclipsestore
+            storage-filesystem:
+                azure:
+                    storage:
+                        connection-string: DefaultEndpointsProtocol=https;AccountName=${ACCOUNT_NAME};AccountKey=${ACCOUNT_KEY};EndpointSuffix=core.windows.net
+                        credentials:
+                            account-key: ${ACCOUNT_KEY}
+                            account-mame: ${ACCOUNT_NAME}
+                            type: shared-key
+spring:
+    application:
+        name: eclipse-strore-demo
+    datasource:
+        url: jdbc:h2:file:./storage-h2;
+    jpa:
+        hibernate:
+            ddl-auto: update
+
+#org:
+#  eclipse:
+#    store:
+#      jokes:
+#        auto-start: true
+#        root: org.microstream.spring.boot.example.advanced.model.JokesRoot
+#        storage-directory: ${java.io.tmpdir}/jokes_storage
+#      muppets:
+#        auto-start: true
+#        root: org.microstream.spring.boot.example.advanced.model.MuppetsRoot
+#        storage-directory: ${java.io.tmpdir}/muppets_storage

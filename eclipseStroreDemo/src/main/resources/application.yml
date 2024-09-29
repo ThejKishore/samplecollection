@@ -1,0 +1,34 @@
+org:
+    eclipse:
+        store:
+            auto-start: true
+            rest:
+                enabled: true
+            root: com.tk.learn.eclipseStroreDemo.employee.EmployeeRoot
+            storage-directory: thej/employee_storage
+            storage-filesystem:
+                azure:
+                    storage:
+                        connection-string: DefaultEndpointsProtocol=https;AccountName=${ACCOUNT_NAME};AccountKey=${ACCOUNT_KEY};EndpointSuffix=core.windows.net
+                        credentials:
+                            account-key: ${ACCOUNT_KEY}
+                            account-mame: ${ACCOUNT_NAME}
+                            type: shared-key
+                target: azure.storage
+spring:
+    application:
+        name: eclipseStroreDemo
+vaadin:
+    url-mapping: /store-console/*
+
+#org:
+#  eclipse:
+#    store:
+#      jokes:
+#        auto-start: true
+#        root: org.microstream.spring.boot.example.advanced.model.JokesRoot
+#        storage-directory: ${java.io.tmpdir}/jokes_storage
+#      muppets:
+#        auto-start: true
+#        root: org.microstream.spring.boot.example.advanced.model.MuppetsRoot
+#        storage-directory: ${java.io.tmpdir}/muppets_storage

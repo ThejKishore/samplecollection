@@ -1,0 +1,6 @@
+rootProject.name = 'workspace'
+
+include 'eclipse-strore-demo'
+include 'eclipseStroreDemo'
+include 'spring-apache-fop'
+
